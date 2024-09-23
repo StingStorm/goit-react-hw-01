@@ -5,7 +5,7 @@ import FriendList from './components/FriendList/FriendList';
 import friends from './friendsData.json';
 import TransactionHistory from './components/TransactionHistory/TransactionHistory';
 import transactions from './transactions.json';
-import Header from './components/header/Header';
+import Header from './components/AppHeader/Header';
 
 function App() {
   return (
