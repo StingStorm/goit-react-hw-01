@@ -1,9 +1,13 @@
+import css from './FriendListItem.module.css';
+
 const FriendListItem = props => {
   return (
-    <div>
-      <img src={props.avatar} alt="Avatar" width="48" />
+    <div className={css.friendCard}>
+      <img src={props.avatar} alt="Avatar" width="62" />
       <p>{props.name}</p>
-      <p>{props.online}</p>
+      <p className={props.online ? css.isOnline : css.isOffline}>
+        {props.online ? 'Online' : 'Offline'}
+      </p>
     </div>
   );
 };

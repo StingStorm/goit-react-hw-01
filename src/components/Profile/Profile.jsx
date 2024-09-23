@@ -3,30 +3,31 @@ import css from './Profile.module.css';
 
 const Profile = props => {
   return (
-    <div className={css.profileCard}>
-      <div className={css.profileDescr}>
-        <div className={css.profileAvatar}>
-          <img src={props.image} alt="User avatar" />
+    <div className="section">
+      <div className={css.profileCard}>
+        <div className={css.profileDescr}>
+          <div className={css.profileAvatar}>
+            <img src={props.image} alt="User avatar" />
+          </div>
+          <p className={css.profileName}>{props.name}</p>
+          <p className={css.profileInfo}>@{props.tag}</p>
+          <p className={css.profileInfo}>{props.location}</p>
         </div>
-        <p className={css.profileName}>{props.name}</p>
-        <p className={css.profileInfo}>@{props.tag}</p>
-        <p className={css.profileInfo}>{props.location}</p>
+        <ul className={css.profileStatsList}>
+          <li className={css.profileStatsItem}>
+            <span>Followers</span>
+            <span>{props.stats.followers}</span>
+          </li>
+          <li className={css.profileStatsItem}>
+            <span>Views</span>
+            <span>{props.stats.views}</span>
+          </li>
+          <li className={css.profileStatsItem}>
+            <span>Likes</span>
+            <span>{props.stats.likes}</span>
+          </li>
+        </ul>
       </div>
-
-      <ul className={css.profileStatsList}>
-        <li className={css.profileStatsItem}>
-          <span>Followers</span>
-          <span>{props.stats.followers}</span>
-        </li>
-        <li className={css.profileStatsItem}>
-          <span>Views</span>
-          <span>{props.stats.views}</span>
-        </li>
-        <li className={css.profileStatsItem}>
-          <span>Likes</span>
-          <span>{props.stats.likes}</span>
-        </li>
-      </ul>
     </div>
   );
 };
